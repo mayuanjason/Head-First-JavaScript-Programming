@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Exercise</title>
+</head>
+<body>
+  <script>
+    var test1 = 0 / 0;
+    if (isNaN(test1)) {
+      console.log("test1 is NaN");
+    }
+
+    var test2 = 10 / 0;
+    if (test2 == Infinity) {
+      console.log("test2 is Infinity");
+    }
+
+    if (99 == "99") {
+      console.log("A number equals a string!");
+    } else {
+      console.log("No way a number equals a string");
+    }
+
+    var addi = 3 + "4";
+    var plusi = "4" + 3;
+    var multi = 3 * "4";
+    var divi = 80 / "10";
+    var mini = "10" - 5;
+    console.log("addi is " + addi);
+    console.log("plusi is " + plusi);
+    console.log("multi is " + multi);
+    console.log("divi is " + divi);
+    console.log("mini is " + mini);
+
+    var order1 = 1 + 2 + "pizzas";
+    var order2 = 1 + (2 + "pizzas");
+    console.log("order1 is " + order1);
+    console.log("order2 is " + order2);
+  </script>
+</body>
+</html>
