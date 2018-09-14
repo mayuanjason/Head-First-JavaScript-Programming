@@ -4,14 +4,31 @@
 	<meta charset="utf-8">
 	<title>Tick Tock</title>
 	<script>
-		function timeHandler() {
-      alert("hey what are you doing just sitting there starting at a blank screen?"); 
-    }
+		function init() {
+			setInterval(ticker, 1000);
+		}
+		
+		function display(text) {
+			var messagePara = document.getElementById("message");
+			messagePara.innerHTML = messagePara.innerHTML + " " + text;
+		}
 
-    setTimeout(timeHandler, 5000);
+		var tick = true;
+
+		function ticker() {
+			if (tick) {
+				display("TICK");
+				tick = false;
+			} else {
+				display("TOCK");
+				tick = true;
+			}
+		}
+		
+		window.onload = init;
 	</script>
 </head>
 <body>
-
+	<p id="message"></p>
 </body>
 </html>
